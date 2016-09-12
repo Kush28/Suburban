@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.johnny.suburban.MainActivity"
+    android:id="@+id/topContainer"
+    android:background="@color/colorPrimary"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:visibility="visible"
+        android:id="@+id/layer1">
+
+        <LinearLayout
+            android:layout_below="@+id/titleText"
+            android:id="@+id/searchHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="#0000">
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/wrapper"
+                android:gravity="center_vertical"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textfWrapper"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:radius="2dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/card_style"
+                    android:layout_weight="30">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/sourceHolder"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:background="@drawable/search_holder_design">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView2"
+                            android:src="@drawable/ic_store_mall_directory_24dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Search Source"
+                            android:id="@+id/source"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            android:textColor="@color/colorPrimary"/>
+
+                        <Space
+                            android:layout_width="30dp"
+                            android:layout_height="20px"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:id="@+id/view"
+                        android:background="#BDBDBD"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/destinationHolder"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:background="@drawable/search_holder_design">                        
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView3"
+                            android:src="@drawable/ic_place_24dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Search Destination"
+                            android:id="@+id/destination"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            android:textColor="@color/colorPrimary"/>
+
+                        <Space
+                            android:layout_width="30dp"
+                            android:layout_height="20px"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_swap_vert_24dp"
+                        android:id="@+id/swapButton"
+                        android:background="@drawable/swap_btn_bg"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="7dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trains after: "
+                        android:id="@+id/checkBox"
+                        android:checked="false"
+                        android:textSize="20dp"
+                        android:textColor="#FFF" />
+                    <TextClock
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textClock"
+                        android:textSize="20dp"
+                        android:textColor="#FFF" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Go"
+                    android:id="@+id/searchButton"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_bar_design"
+                    android:textSize="20dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/colorPrimary"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Suburban"
+            android:id="@+id/titleText"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingTop="32dp"
+            android:paddingBottom="15dp"
+            android:textSize="50dp"
+            android:textColor="#FFF" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF9800"
+        android:gravity="center_horizontal"
+        android:id="@+id/layer2"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/layer2Img"
+            android:src="@drawable/ic_expand_more_24dp"
+            android:background="#30000000"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Recent Rides"
+            android:id="@+id/layer2Title"
+            android:textColor="#FFF"
+            android:paddingBottom="5dp" />
+
+        <ListView
+
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layer2List"
+            android:choiceMode="singleChoice"
+            android:background="@drawable/card_style"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layer3"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3F51B5"
+        android:visibility="gone"
+        android:padding="10dp"
+
+        >
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_style"
+            android:gravity="center_vertical"
+            android:id="@+id/searchViewHolder"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="15dp"
+            android:clickable="true">
+
+            <SearchView
+                android:id="@+id/sv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:queryBackground="@android:color/transparent"
+                android:iconifiedByDefault="false"
+                android:voiceSearchMode="showVoiceSearchButton|launchRecognizer"
+                android:layout_weight="1"
+                android:voiceIcon="@drawable/ic_mic_none_24dp_unselected"
+                android:paddingRight="4dp">
+
+
+            </SearchView>
+
+            <ImageButton
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/micButton"
+                android:src="@drawable/ic_mic_none_24dp_unselected"
+                android:background="@drawable/swap_btn_bg"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/searchListHolder"
+            android:background="@drawable/card_style">
+
+            <ListView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchList" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/expand"
+        android:background="#30000000"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_expand_less_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Recent Rides"
+            android:textColor="#FFF"
+            android:id="@+id/textView" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/shade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"
+        android:visibility="gone"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:paddingTop="200dp"
+        android:paddingBottom="200dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/shadeInner">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:indeterminate="true" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
